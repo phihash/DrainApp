@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="startButton">ボタン</button>
+  <button id="stopButton">ストップ</button>
+  <p id="randomArea"></p>
+</body>
+<script>
+  const randomArea = document.getElementById("randomArea");
+  const targets = ["自分が","相手が","2人とも"];
+  const numbers = [5,10,15];
+  const actions = ["増える","減る","もらう"]
+  let setId = null;
+  let targetsIndex = 0;
+  let numbersIndex = 0;
+  let actionsIndex = 0;
+
+  const startbutton = document.getElementById("startButton");
+  const stopbutton = document.getElementById("stopButton");
+  
+  
+  const targetSlot = () => {
+    if(targetsIndex == targets.length) targetsIndex = 0;
+    randomArea.textContent = targets[targetsIndex];
+    targetsIndex++;
+    setId = setTimeout(targetSlot,50);
+  }
+
+  startbutton.addEventListener("click",(e) => {
+    console.log(e.currentTarget.id);
+    if(setId != null) return ;
+    targetSlot();
+  })
+
+  stopbutton.addEventListener("click",() => {
+    clearInterval(setId);
+    setId = null;
+  })
+
+ 
+
+ 
+</script>
+</html>
