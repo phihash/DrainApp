@@ -5,11 +5,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
-  <button id="startButton">ボタン</button>
-  <button id="stopButton">ストップ</button>
-  <p id="randomArea"></p>
+  <div class="PageWrapper">
+    <header class="header">
+      <h1>数字を減らすゲーム</h1>
+    </header>
+    <main class="main">
+      <button id="startButton">ボタン</button>
+      <button id="stopButton">ストップ</button>
+      <p id="randomArea"></p>
+    </main>
+    <footer class="footer">
+      <p>GitHub</p>
+    </footer>
+  </div>
 </body>
 <script>
   const randomArea = document.getElementById("randomArea");
