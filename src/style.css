@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+*{
+  margin: 0;
+  padding: 0;
+}
+
 .PageWrapper{
   display: flex;
   flex-direction: column;
@@ -10,4 +15,12 @@
 .main{
   flex:1;
   /* overflow-x: hidden; */
+}
+
+.header{
+  background-color:#82d3ff;
+}
+
+.footer{
+  background-color:#82d3ff;
 }
